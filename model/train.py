@@ -79,14 +79,14 @@ def train_model(data_path, output_file):
     auc = roc_auc_score(y_test, y_pred)
 
     print(f"AUC : {auc}")
-    return ohe, scaler, model, auc
+    return ohe, scaler, model
 
 if __name__ == '__main__':
 
     output_file = f'model_1.bin'
     data_path = "/home/pawarad/Data-science/ml-zoomcamp/mid-term-project/data/clean_dataset.csv"
 
-    ohe, scaler, model, auc = train_model(data_path, output_file)
+    ohe, scaler, model = train_model(data_path, output_file)
     print("Model Trained")
 
     # Save the model
